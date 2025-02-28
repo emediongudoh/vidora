@@ -18,8 +18,12 @@ import { Separator } from "../ui/separator";
 
 // Local imports
 import { homeSidebarSections } from "@/configs";
+import { useAuth, useClerk } from "@clerk/nextjs";
 
 export const Sidebar = () => {
+  const clerk = useClerk();
+  const { isSignedIn } = useAuth();
+
   return (
     <ShadcnSidebar
       collapsible="icon"
@@ -40,7 +44,12 @@ export const Sidebar = () => {
                       <SidebarMenuButton
                         asChild
                         tooltip={item.label}
-                        onClick={() => {}}
+                        onClick={e => {
+                          if (!isSignedIn && item.isPrivateRoute) {
+                            e.preventDefault();
+                            return clerk.openSignIn();
+                          }
+                        }}
                         isActive={false}
                         className="h-11"
                       >

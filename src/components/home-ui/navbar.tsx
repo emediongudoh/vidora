@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
 import { SidebarTrigger } from "../ui/sidebar";
@@ -18,7 +19,15 @@ export const Navbar = () => {
 
       <div className="flex items-center gap-2">
         <ModeToggle />
-        <Button variant="site">Sign in</Button>
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <SignInButton mode="modal">
+            <Button variant="site">Sign in</Button>
+          </SignInButton>
+        </SignedOut>
       </div>
     </div>
   );

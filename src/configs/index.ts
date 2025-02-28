@@ -19,6 +19,7 @@ export const homeSidebarSections = [
         label: "Subscriptions",
         href: "/feed/subscriptions",
         icon: PlaySquareIcon,
+        isPrivateRoute: true,
       },
       {
         label: "Trending",
@@ -34,16 +35,19 @@ export const homeSidebarSections = [
         label: "History",
         href: "/feed/history",
         icon: History,
+        isPrivateRoute: true,
       },
       {
         label: "Playlists",
         href: "/feed/playlists",
         icon: ListVideo,
+        isPrivateRoute: true,
       },
       {
         label: "Liked videos",
         href: "/feed/liked",
         icon: Heart,
+        isPrivateRoute: true,
       },
     ],
   },
