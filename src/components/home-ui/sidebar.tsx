@@ -17,7 +17,7 @@ import {
 import { Separator } from "../ui/separator";
 
 // Local imports
-import { homeSidebarSections } from "@/configs";
+import { homeSidebarSections } from "@/constants";
 import { useAuth, useClerk } from "@clerk/nextjs";
 
 export const Sidebar = () => {
