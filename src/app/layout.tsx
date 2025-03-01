@@ -5,6 +5,7 @@ import "./globals.css";
 // Components import
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
+import { TRPCProvider } from "@/trpc/client";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <TRPCProvider>{children}</TRPCProvider>
           </ThemeProvider>
         </body>
       </html>

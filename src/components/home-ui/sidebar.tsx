@@ -27,7 +27,7 @@ export const Sidebar = () => {
   return (
     <ShadcnSidebar
       collapsible="icon"
-      className="w-52 pt-[69px]"
+      className="z-40 w-52 pt-[69px]"
     >
       <SidebarContent>
         {homeSidebarSections.map(section => (
