@@ -4,7 +4,9 @@ import {
   Home,
   ListVideo,
   PlaySquareIcon,
-  TrendingUp,
+  Flame,
+  Video,
+  LogOut,
 } from "lucide-react";
 
 export const homeSidebarSections = [
@@ -24,7 +26,7 @@ export const homeSidebarSections = [
       {
         label: "Trending",
         href: "/feed/trending",
-        icon: TrendingUp,
+        icon: Flame,
       },
     ],
   },
@@ -50,5 +52,18 @@ export const homeSidebarSections = [
         isPrivateRoute: true,
       },
     ],
+  },
+];
+
+export const studioSidebarSections = [
+  {
+    label: "Content",
+    href: "/studio",
+    icon: Video,
+  },
+  {
+    label: "Exit studio",
+    href: "/",
+    icon: LogOut,
   },
 ];

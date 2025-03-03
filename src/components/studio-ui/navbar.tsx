@@ -1,14 +1,12 @@
-"use client";
-
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
 import { SidebarTrigger } from "../ui/sidebar";
-import { Clapperboard } from "lucide-react";
 
 // Local imports
 import { Logo } from "./logo";
 import { SearchInput } from "./search-input";
+import { UploadButton } from "./upload-button";
 
 export const Navbar = () => {
   return (
@@ -21,18 +19,11 @@ export const Navbar = () => {
       <SearchInput />
 
       <div className="flex items-center gap-2">
+        <UploadButton />
         <ModeToggle />
 
         <SignedIn>
-          <UserButton>
-            <UserButton.MenuItems>
-              <UserButton.Link
-                label="Studio"
-                href="/studio"
-                labelIcon={<Clapperboard className="size-4" />}
-              />
-            </UserButton.MenuItems>
-          </UserButton>
+          <UserButton />
         </SignedIn>
         <SignedOut>
           <SignInButton mode="modal">
