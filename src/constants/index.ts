@@ -67,3 +67,5 @@ export const studioSidebarSections = [
     icon: LogOut,
   },
 ];
+
+export const DEFAULT_LIMIT = 5;

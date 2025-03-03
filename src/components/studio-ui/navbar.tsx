@@ -6,7 +6,7 @@ import { SidebarTrigger } from "../ui/sidebar";
 // Local imports
 import { Logo } from "./logo";
 import { SearchInput } from "./search-input";
-import { UploadButton } from "./upload-button";
+import { UploadModal } from "./upload-modal";
 
 export const Navbar = () => {
   return (
@@ -19,7 +19,7 @@ export const Navbar = () => {
       <SearchInput />
 
       <div className="flex items-center gap-2">
-        <UploadButton />
+        <UploadModal />
         <ModeToggle />
 
         <SignedIn>
